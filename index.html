@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>פצפון – אנגלית לילדים דרך משחק</title>
+<meta name="description" content="פצפון מלמדת ילדים בגילאי 3–8 את המילים הראשונות באנגלית דרך 18 משחקים: חללית, שובר לבנים, בועות ועוד. בלי פרסומות, בלי מעקב, עובד גם בלי אינטרנט.">
+<meta name="theme-color" content="#6C4BD6">
+<link rel="icon" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/icon.png">
+
+<!-- How the link looks when shared on WhatsApp / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:title" content="פצפון – אנגלית לילדים דרך משחק">
+<meta property="og:description" content="263 מילים, 18 משחקים, מסלול לפי גיל. בלי פרסומות ובלי מעקב. שבוע ניסיון חינם.">
+<meta property="og:image" content="https://edenmeshulam.github.io/pizponfree/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6800318411">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --grape: #6C4BD6;
+    --grape-dark: #4A2FA6;
+    --grape-light: #9B7CF0;
+    --coral: #FF6B6B;
+    --sky: #38BDF8;
+    --grass: #34D399;
+    --gold: #FBBF24;
+    --pink: #F472B6;
+    --ink: #2C2050;
+    --ink-soft: #6B5F8C;
+    --bg: #F7F3FF;
+    --card: #FFFFFF;
+    --radius: 28px;
+    --shadow: 0 18px 40px -18px rgba(59, 42, 120, 0.35);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Rubik', system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+
+  /* ---------- nav ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(247, 243, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 22px; text-decoration: none; color: var(--grape-dark); }
+  .brand img { width: 40px; height: 40px; border-radius: 12px; }
+  .nav-cta {
+    text-decoration: none; background: var(--grape); color: #fff; font-weight: 800;
+    padding: 10px 18px; border-radius: 999px; font-size: 15px;
+  }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; padding: 32px 0 72px; overflow: hidden; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(2px); opacity: .55; z-index: 0; }
+  .blob.a { width: 420px; height: 420px; background: #E3D8FF; top: -120px; inset-inline-start: -140px; }
+  .blob.b { width: 300px; height: 300px; background: #FFE0EC; bottom: -80px; inset-inline-end: -80px; }
+  .hero .wrap { position: relative; z-index: 1; display: grid; gap: 40px; align-items: center; }
+  @media (min-width: 900px) { .hero .wrap { grid-template-columns: 1.1fr .9fr; } }
+
+  .pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff; color: var(--grape-dark); font-weight: 800; font-size: 14px;
+    padding: 8px 14px; border-radius: 999px; box-shadow: var(--shadow);
+  }
+  .pill .new { background: var(--coral); color: #fff; border-radius: 999px; padding: 2px 10px; font-size: 12px; }
+  h1 {
+    font-size: clamp(38px, 7vw, 64px); line-height: 1.08; margin: 18px 0 16px; font-weight: 900;
+    color: var(--grape-dark); letter-spacing: -0.5px;
+  }
+  h1 .hl {
+    background: linear-gradient(90deg, var(--coral), var(--pink));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .lead { font-size: clamp(17px, 2.3vw, 20px); color: var(--ink-soft); max-width: 34em; margin: 0 0 28px; }
+
+  .stores { display: flex; flex-wrap: wrap; gap: 12px; }
+  .store {
+    display: inline-flex; align-items: center; gap: 12px; text-decoration: none;
+    background: #111; color: #fff; padding: 11px 20px 11px 22px; border-radius: 16px;
+    transition: transform .15s ease;
+    min-width: 190px;
+  }
+  .store:hover { transform: translateY(-2px); }
+  .store svg { width: 28px; height: 28px; flex: none; }
+  .store small { display: block; font-size: 11px; opacity: .8; line-height: 1.2; }
+  .store b { display: block; font-size: 18px; line-height: 1.2; direction: ltr; text-align: start; }
+  .trial { margin-top: 14px; font-size: 14px; color: var(--ink-soft); font-weight: 500; }
+  .trial b { color: var(--grass); }
+
+  /* phone */
+  .stage { position: relative; display: flex; justify-content: center; }
+  .phone {
+    width: min(300px, 72vw); aspect-ratio: 921 / 2000; border-radius: 44px; background: #1b1446;
+    padding: 10px; box-shadow: 0 40px 80px -30px rgba(74, 47, 166, .55); transform: rotate(-3deg);
+    position: relative; z-index: 2;
+  }
+  .phone img { width: 100%; height: 100%; object-fit: cover; border-radius: 36px; }
+  .float {
+    position: absolute; z-index: 3; width: 92px; height: 92px; border-radius: 26px; overflow: hidden;
+    background: #fff; box-shadow: var(--shadow); border: 4px solid #fff;
+    animation: bob 4s ease-in-out infinite;
+  }
+  .float img { width: 100%; height: 100%; object-fit: cover; }
+  .float.f1 { top: 6%; inset-inline-start: calc(50% - 210px); animation-delay: 0s; }
+  .float.f2 { top: 42%; inset-inline-end: calc(50% - 220px); animation-delay: -1.3s; }
+  .float.f3 { bottom: 4%; inset-inline-start: calc(50% - 200px); animation-delay: -2.6s; }
+  .mascot-hero {
+    position: absolute; z-index: 4; width: 150px; bottom: -30px; inset-inline-end: calc(50% - 200px);
+    animation: bob 3.2s ease-in-out infinite; animation-delay: -.6s;
+  }
+  @keyframes bob { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-12px) rotate(2deg); } }
+  @media (max-width: 480px) {
+    .float { width: 70px; height: 70px; border-radius: 20px; }
+    .float.f1 { inset-inline-start: 0; } .float.f2 { inset-inline-end: 0; } .float.f3 { inset-inline-start: 4px; }
+    .mascot-hero { width: 110px; inset-inline-end: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { .float, .mascot-hero { animation: none; } }
+
+  /* ---------- facts strip ---------- */
+  .facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: -24px; position: relative; z-index: 5; }
+  @media (min-width: 760px) { .facts { grid-template-columns: repeat(4, 1fr); } }
+  .fact { background: #fff; border-radius: 22px; padding: 18px; text-align: center; box-shadow: var(--shadow); }
+  .fact b { display: block; font-size: 32px; font-weight: 900; color: var(--grape); line-height: 1.1; }
+  .fact span { font-size: 14px; color: var(--ink-soft); font-weight: 500; }
+
+  /* ---------- sections ---------- */
+  section { padding: 80px 0; }
+  .eyebrow { color: var(--coral); font-weight: 800; font-size: 14px; letter-spacing: .5px; }
+  h2 { font-size: clamp(30px, 4.6vw, 44px); line-height: 1.15; margin: 6px 0 14px; color: var(--grape-dark); font-weight: 900; }
+  .sub { color: var(--ink-soft); font-size: 18px; max-width: 36em; margin: 0 0 36px; }
+  .center { text-align: center; } .center .sub { margin-inline: auto; }
+
+  /* steps */
+  .steps { display: grid; gap: 18px; }
+  @media (min-width: 760px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+  .step { background: #fff; border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); position: relative; }
+  .step .num {
+    width: 46px; height: 46px; border-radius: 16px; display: grid; place-items: center;
+    font-weight: 900; font-size: 22px; color: #fff; margin-bottom: 14px;
+  }
+  .step h3 { margin: 0 0 6px; font-size: 22px; }
+  .step p { margin: 0; color: var(--ink-soft); }
+
+  /* games */
+  .games-bg { background: linear-gradient(180deg, #EFE7FF, #FDF1F7); }
+  .games { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (min-width: 640px) { .games { grid-template-columns: repeat(4, 1fr); } }
+  @media (min-width: 960px) { .games { grid-template-columns: repeat(6, 1fr); } }
+  .game {
+    border-radius: 24px; padding: 12px 10px 12px; text-align: center; color: var(--ink);
+    position: relative; box-shadow: var(--shadow); transition: transform .15s ease;
+  }
+  .game:hover { transform: translateY(-4px) rotate(-1deg); }
+  .game img { width: 78%; margin: 0 auto 8px; border-radius: 50%; background: #fff; aspect-ratio: 1; object-fit: cover; }
+  .game b { font-size: 15px; font-weight: 800; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.18); }
+  .game .badge {
+    position: absolute; top: -8px; inset-inline-start: -6px; background: var(--coral); color: #fff;
+    font-size: 12px; font-weight: 800; padding: 3px 10px; border-radius: 999px; transform: rotate(-8deg);
+    box-shadow: 0 6px 12px -4px rgba(225, 74, 74, .6);
+  }
+  .g-grape { background: linear-gradient(160deg, #8655F6, #6C4BD6); }
+  .g-coral { background: linear-gradient(160deg, #FF8A8A, #F25C5C); }
+  .g-sky { background: linear-gradient(160deg, #5CC9FA, #1B9FDA); }
+  .g-grass { background: linear-gradient(160deg, #5EEAD4, #22B98C); }
+  .g-gold { background: linear-gradient(160deg, #FDE68A, #F2A50C); }
+  .g-pink { background: linear-gradient(160deg, #F9A8D4, #EC5FA6); }
+
+  /* screenshots */
+  .shots { display: flex; gap: 18px; overflow-x: auto; padding: 8px 4px 24px; scroll-snap-type: x mandatory; }
+  .shots::-webkit-scrollbar { height: 8px; } .shots::-webkit-scrollbar-thumb { background: #D9CCFF; border-radius: 8px; }
+  .shot { flex: none; width: 220px; scroll-snap-align: center; text-align: center; }
+  .shot img { border-radius: 30px; box-shadow: var(--shadow); border: 6px solid #fff; }
+  .shot span { display: block; margin-top: 10px; font-weight: 700; color: var(--grape-dark); }
+
+  /* ages */
+  .ages { display: grid; gap: 18px; }
+  @media (min-width: 760px) { .ages { grid-template-columns: 1fr 1fr; } }
+  .age { border-radius: var(--radius); padding: 30px; color: #fff; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+  .age h3 { font-size: 30px; margin: 0 0 4px; font-weight: 900; }
+  .age .tag { font-weight: 700; opacity: .9; margin-bottom: 16px; }
+  .age ul { margin: 0; padding-inline-start: 20px; }
+  .age li { margin: 6px 0; }
+  .age.little { background: linear-gradient(150deg, #5EEAD4, #22B98C); }
+  .age.big { background: linear-gradient(150deg, #8655F6, #4A2FA6); }
+
+  /* safety */
+  .safe { display: grid; gap: 14px; }
+  @media (min-width: 640px) { .safe { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 960px) { .safe { grid-template-columns: repeat(3, 1fr); } }
+  .safe div { background: #fff; border-radius: 22px; padding: 20px 22px; box-shadow: var(--shadow); display: flex; gap: 14px; align-items: flex-start; }
+  .safe .ic { font-size: 28px; line-height: 1; }
+  .safe h3 { margin: 0 0 2px; font-size: 18px; }
+  .safe p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+  /* pricing */
+  .plans { display: grid; gap: 18px; max-width: 960px; margin-inline: auto; }
+  @media (min-width: 760px) { .plans { grid-template-columns: repeat(3, 1fr); align-items: end; } }
+  .plan { background: #fff; border-radius: var(--radius); padding: 28px 24px; text-align: center; box-shadow: var(--shadow); border: 3px solid transparent; }
+  .plan.best { border-color: var(--gold); transform: translateY(-8px); position: relative; }
+  .plan.best::before {
+    content: "הכי משתלם"; position: absolute; top: -16px; left: 50%; transform: translateX(-50%);
+    background: var(--gold); color: var(--ink); font-weight: 900; font-size: 13px; padding: 4px 14px; border-radius: 999px;
+  }
+  .plan h3 { margin: 0; font-size: 20px; color: var(--grape-dark); }
+  .plan .price { font-size: 40px; font-weight: 900; color: var(--ink); margin: 8px 0 0; direction: ltr; }
+  .plan .per { color: var(--ink-soft); font-size: 15px; }
+  .plan .note { margin-top: 12px; font-size: 14px; font-weight: 700; color: var(--grass); min-height: 1.4em; }
+  .free-line { text-align: center; margin-top: 26px; color: var(--ink-soft); }
+
+  /* faq */
+  .faq { max-width: 780px; margin-inline: auto; }
+  details { background: #fff; border-radius: 20px; padding: 4px 22px; margin-bottom: 12px; box-shadow: var(--shadow); }
+  summary { cursor: pointer; font-weight: 800; font-size: 18px; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--grape); font-size: 24px; line-height: 1; transition: transform .2s; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { margin: 0 0 18px; color: var(--ink-soft); }
+
+  /* final cta */
+  .final {
+    background: linear-gradient(140deg, #8655F6, #6C4BD6 55%, #EC5FA6);
+    color: #fff; border-radius: 40px; padding: 56px 28px; text-align: center; position: relative; overflow: hidden;
+  }
+  .final h2 { color: #fff; }
+  .final p { font-size: 19px; opacity: .92; margin: 0 auto 28px; max-width: 30em; }
+  .final .stores { justify-content: center; }
+  .final .store { background: #fff; color: var(--ink); }
+  .final img.m { width: 140px; margin: -10px auto 8px; }
+
+  footer { padding: 40px 0 56px; color: var(--ink-soft); font-size: 14px; text-align: center; }
+  footer a { color: var(--grape); font-weight: 700; text-decoration: none; margin: 0 10px; }
+
+  /* sticky mobile download bar */
+  .mbar {
+    position: fixed; bottom: 12px; inset-inline: 12px; z-index: 30; display: none;
+    background: var(--grape); color: #fff; text-decoration: none; text-align: center;
+    font-weight: 900; font-size: 18px; padding: 15px; border-radius: 18px;
+    box-shadow: 0 16px 30px -12px rgba(74, 47, 166, .7);
+  }
+  @media (max-width: 760px) { .mbar.show { display: block; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/icon.png" alt="">פצפון</a>
+    <a class="nav-cta" href="#download" data-store>להורדה</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="blob a"></div><div class="blob b"></div>
+  <div class="wrap">
+    <div>
+      <span class="pill"><span class="new">חדש!</span> 3 משחקים חדשים: חללית, בלוקים ושובר לבנים</span>
+      <h1>אנגלית לילדים,<br><span class="hl">דרך משחק.</span></h1>
+      <p class="lead">פצפון מלמדת ילדים בגילאי <span dir="ltr">3–8</span> את המילים הראשונות באנגלית. כל מילה עם תמונה, הקלטה קולית ותרגום, כך שגם ילד שעוד לא קורא משחק ומתקדם לבד.</p>
+      <div class="stores" id="download">
+        <a class="store" href="https://apps.apple.com/app/id6800318411" data-platform="ios" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.64c-.02-2.25 1.84-3.33 1.92-3.38-1.05-1.53-2.68-1.74-3.26-1.76-1.39-.14-2.71.82-3.42.82-.7 0-1.79-.8-2.95-.78-1.52.02-2.92.88-3.7 2.24-1.58 2.74-.4 6.8 1.13 9.02.75 1.09 1.64 2.31 2.81 2.27 1.13-.05 1.56-.73 2.92-.73 1.36 0 1.75.73 2.95.71 1.22-.02 1.99-1.1 2.73-2.2.86-1.26 1.21-2.49 1.23-2.55-.03-.01-2.36-.9-2.36-3.66zM14.14 6.03c.62-.76 1.04-1.8.93-2.85-.9.04-1.99.6-2.63 1.35-.58.66-1.08 1.73-.95 2.75 1 .08 2.03-.51 2.65-1.25z"/></svg>
+          <span><small>להורדה מה-</small><b>App Store</b></span>
+        </a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.pizpon.app" data-platform="android" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34D399" d="M3.6 2.2 13.5 12l-9.9 9.8c-.35-.2-.6-.6-.6-1.1V3.3c0-.5.25-.9.6-1.1z"/><path fill="#FBBF24" d="m16.8 15.3-3.3-3.3 3.3-3.3 3.7 2.1c1 .6 1 1.9 0 2.4l-3.7 2.1z"/><path fill="#FF6B6B" d="M16.8 15.3 13.5 12l-9.9 9.8c.36.2.83.2 1.27-.05l11.93-6.45z"/><path fill="#38BDF8" d="M16.8 8.7 4.87 2.25C4.43 2 3.96 2 3.6 2.2L13.5 12l3.3-3.3z"/></svg>
+          <span><small>להורדה מ-</small><b>Google Play</b></span>
+        </a>
+      </div>
+      <p class="trial">✨ <b>שבוע ניסיון חינם</b> · בלי פרסומות · בלי הרשמה</p>
+    </div>
+
+    <div class="stage">
+      <div class="float f1"><img src="img/game_space.jpg" alt="משחק החללית"></div>
+      <div class="float f2"><img src="img/game_bricks.jpg" alt="משחק שובר לבנים"></div>
+      <div class="float f3"><img src="img/game_bubble.jpg" alt="משחק הבועות"></div>
+      <div class="phone"><img src="img/shot-words.jpg" alt="מסך לימוד מילים באפליקציה: כלב – dog"></div>
+      <img class="mascot-hero" src="img/mascot_happy.png" alt="">
+    </div>
+  </div>
+</header>
+
+<div class="wrap facts">
+  <div class="fact"><b>263</b><span>מילים באנגלית</span></div>
+  <div class="fact"><b>18</b><span>משחקים לפי גיל</span></div>
+  <div class="fact"><b>19</b><span>נושאים</span></div>
+  <div class="fact"><b>0</b><span>פרסומות</span></div>
+</div>
+
+<section>
+  <div class="wrap center">
+    <div class="eyebrow">איך זה עובד</div>
+    <h2>שומעים, משחקים, אומרים</h2>
+    <p class="sub">שלושה צעדים פשוטים, בדיוק כמו שילדים לומדים שפה – בלי שיעורי בית ובלי שינון.</p>
+    <div class="steps">
+      <div class="step"><div class="num" style="background:var(--sky)">1</div><h3>שומעים</h3><p>כל מילה מגיעה עם תמונה ברורה והקלטה קולית – באנגלית ובעברית.</p></div>
+      <div class="step"><div class="num" style="background:var(--coral)">2</div><h3>משחקים</h3><p>יורים באסטרואידים, שוברים לבנים, מפוצצים בועות – וכל מהלך הוא החלטה על מילה.</p></div>
+      <div class="step"><div class="num" style="background:var(--grass)">3</div><h3>אומרים</h3><p>הילד אומר את המילה בקול, והאפליקציה בודקת אם אמר נכון – ישר במכשיר.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="games-bg">
+  <div class="wrap center">
+    <div class="eyebrow">18 משחקים</div>
+    <h2>משחקים אמיתיים, לא עוד חידון</h2>
+    <p class="sub">ילדים לא מבקשים "עוד שיעור". הם מבקשים "עוד משחק". אז בנינו משחקים שבהם האנגלית היא הדרך לנצח.</p>
+    <div class="games">
+      <div class="game g-grape"><span class="badge">חדש!</span><img src="img/game_space.jpg" alt=""><b>חללית</b></div>
+      <div class="game g-coral"><span class="badge">חדש!</span><img src="img/game_blocks.jpg" alt=""><b>בלוקים</b></div>
+      <div class="game g-gold"><span class="badge">חדש!</span><img src="img/game_bricks.jpg" alt=""><b>שובר לבנים</b></div>
+      <div class="game g-sky"><img src="img/game_bubble.jpg" alt=""><b>בועות</b></div>
+      <div class="game g-pink"><img src="img/game_feed.jpg" alt=""><b>האכלה</b></div>
+      <div class="game g-gold"><img src="img/game_race.jpg" alt=""><b>מרוץ</b></div>
+      <div class="game g-grass"><img src="img/game_catch.jpg" alt=""><b>תפיסה</b></div>
+      <div class="game g-coral"><img src="img/game_match.jpg" alt=""><b>התאמה</b></div>
+      <div class="game g-grape"><img src="img/game_memory.jpg" alt=""><b>זיכרון</b></div>
+      <div class="game g-pink"><img src="img/game_speak.jpg" alt=""><b>אומרים</b></div>
+      <div class="game g-sky"><img src="img/game_sort.jpg" alt=""><b>מיון</b></div>
+      <div class="game g-gold"><img src="img/game_spell.jpg" alt=""><b>איות</b></div>
+    </div>
+    <p class="sub" style="margin-top:28px">ועוד: קריאה, צליל פותח, השלמת אות, ערבוב אותיות, הקלדה ובניית משפטים.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap center">
+    <div class="eyebrow">מבפנים</div>
+    <h2>ככה זה נראה</h2>
+    <p class="sub">צבעוני, ברור ונעים – עם פצפון, הציפור שמלווה את הילד בכל צעד.</p>
+  </div>
+  <div class="wrap">
+    <div class="shots">
+      <div class="shot"><img src="img/shot-words.jpg" alt="לימוד מילים" loading="lazy"><span>לומדים מילים</span></div>
+      <div class="shot"><img src="img/shot-games.jpg" alt="בחירת משחק" loading="lazy"><span>בוחרים משחק</span></div>
+      <div class="shot"><img src="img/shot-speak.jpg" alt="משחק הדיבור" loading="lazy"><span>מתאמנים בדיבור</span></div>
+      <div class="shot"><img src="img/shot-journey.jpg" alt="מסע הלמידה" loading="lazy"><span>מסע אישי</span></div>
+      <div class="shot"><img src="img/shot-stickers.jpg" alt="אלבום מדבקות" loading="lazy"><span>אוספים מדבקות</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">מותאם לגיל</div>
+      <h2>שני מסלולים, כי גיל 4 הוא לא גיל 7</h2>
+      <p class="sub">בוחרים גיל פעם אחת, ופצפון בונה מסלול שמתאים בדיוק לשלב שבו הילד נמצא.</p>
+    </div>
+    <div class="ages">
+      <div class="age little">
+        <h3>גילאי <span dir="ltr">3–5</span></h3>
+        <div class="tag">10 משחקים · בלי צורך לקרוא</div>
+        <ul>
+          <li>מטרות גדולות, תנועה איטית וסלחנית</li>
+          <li>בועות, האכלת מפלצת, חללית ושובר לבנים עם רשת ביטחון</li>
+          <li>אין אף מילה כתובה באנגלית – רק תמונה וקול</li>
+        </ul>
+      </div>
+      <div class="age big">
+        <h3>גילאי <span dir="ltr">6–8</span></h3>
+        <div class="tag">16 משחקים · קריאה, כתיבה ומשפטים</div>
+        <ul>
+          <li>סולם קריאה: מזהים מילה, צליל פותח, אות חסרה, איות והקלדה</li>
+          <li>בונים משפטים שלמים באנגלית</li>
+          <li>משחקי אקשן: בלוקים (טטריס), חללית ושובר לבנים</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">להורים</div>
+      <h2>בטוח. שקט. בלי הפתעות.</h2>
+      <p class="sub">בנינו את פצפון כמו שהיינו רוצים לתת לילדים שלנו.</p>
+    </div>
+    <div class="safe">
+      <div><span class="ic">🚫</span><span><h3>בלי פרסומות</h3><p>אף פעם. שום דבר לא קופץ באמצע המשחק.</p></span></div>
+      <div><span class="ic">🔒</span><span><h3>בלי מעקב</h3><p>לא אוספים נתונים, לא צריך חשבון ולא צריך הרשמה.</p></span></div>
+      <div><span class="ic">✈️</span><span><h3>עובד בלי אינטרנט</h3><p>מושלם לטיסה, לנסיעה או לחדר המתנה.</p></span></div>
+      <div><span class="ic">🎤</span><span><h3>הדיבור נשאר במכשיר</h3><p>זיהוי הדיבור מתבצע בטלפון עצמו. שום הקלטה לא נשמרת ולא נשלחת.</p></span></div>
+      <div><span class="ic">👨‍👩‍👧</span><span><h3>אזור הורים מוגן</h3><p>הגדרות ורכישות מאחורי שער שילד קטן לא פותר.</p></span></div>
+      <div><span class="ic">📈</span><span><h3>רואים התקדמות</h3><p>באזור ההורים רואים אילו מילים הילד כבר יודע.</p></span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">מחירים</div>
+      <h2>מתחילים בחינם</h2>
+      <p class="sub">4 משחקים ו-4 מילים בכל נושא פתוחים תמיד. פצפון פרימיום פותח את הכול.</p>
+    </div>
+    <div class="plans">
+      <div class="plan"><h3>חודשי</h3><div class="price">₪9.90</div><div class="per">לחודש</div><div class="note">שבוע ניסיון חינם</div></div>
+      <div class="plan best"><h3>שנתי</h3><div class="price">₪39.90</div><div class="per">לשנה · פחות מ-₪3.40 לחודש</div><div class="note">שבוע ניסיון חינם</div></div>
+      <div class="plan"><h3>לתמיד</h3><div class="price">₪79.90</div><div class="per">תשלום אחד, בלי חידוש</div><div class="note"></div></div>
+    </div>
+    <p class="free-line">אפשר לבטל בכל רגע מהגדרות החנות.</p>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="center"><div class="eyebrow">שאלות</div><h2>שאלות נפוצות</h2></div>
+    <div class="faq">
+      <details><summary>לאיזה גיל מתאימה האפליקציה?</summary><p>לילדים בגילאי 3 עד 8. בפתיחה בוחרים גיל, והאפליקציה מציגה רק את המשחקים שמתאימים לשלב של הילד.</p></details>
+      <details><summary>הילד שלי עוד לא יודע לקרוא. זה בסדר?</summary><p>בהחלט. במסלול של גילאי 3–5 אין בכלל מילים כתובות באנגלית – הכול דרך תמונות וקול, והוראות בעברית.</p></details>
+      <details><summary>יש פרסומות?</summary><p>לא. אין פרסומות, אין קישורים שקופצים לילד ואין איסוף נתונים. רכישות אפשריות רק מאזור ההורים המוגן.</p></details>
+      <details><summary>זה עובד בלי אינטרנט?</summary><p>כן. כל המילים, ההקלטות והמשחקים נמצאים בתוך האפליקציה. צריך אינטרנט רק כדי לרכוש מנוי.</p></details>
+      <details><summary>איך מבטלים מנוי?</summary><p>בהגדרות החשבון ב-App Store או ב-Google Play, בכל רגע. אם מבטלים בזמן שבוע הניסיון – לא מחויבים.</p></details>
+      <details><summary>על אילו מכשירים זה עובד?</summary><p>אייפון, אייפד, וטלפונים וטאבלטים של אנדרואיד.</p></details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="final">
+      <img class="m" src="img/mascot_celebrate.png" alt="">
+      <h2>מוכנים להתחיל לשחק?</h2>
+      <p>הורידו את פצפון עכשיו ותנו לילדים ללמוד אנגלית בדרך הכי כיפית שיש.</p>
+      <div class="stores">
+        <a class="store" href="https://apps.apple.com/app/id6800318411" data-platform="ios" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.64c-.02-2.25 1.84-3.33 1.92-3.38-1.05-1.53-2.68-1.74-3.26-1.76-1.39-.14-2.71.82-3.42.82-.7 0-1.79-.8-2.95-.78-1.52.02-2.92.88-3.7 2.24-1.58 2.74-.4 6.8 1.13 9.02.75 1.09 1.64 2.31 2.81 2.27 1.13-.05 1.56-.73 2.92-.73 1.36 0 1.75.73 2.95.71 1.22-.02 1.99-1.1 2.73-2.2.86-1.26 1.21-2.49 1.23-2.55-.03-.01-2.36-.9-2.36-3.66zM14.14 6.03c.62-.76 1.04-1.8.93-2.85-.9.04-1.99.6-2.63 1.35-.58.66-1.08 1.73-.95 2.75 1 .08 2.03-.51 2.65-1.25z"/></svg>
+          <span><small>להורדה מה-</small><b>App Store</b></span>
+        </a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.pizpon.app" data-platform="android" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34D399" d="M3.6 2.2 13.5 12l-9.9 9.8c-.35-.2-.6-.6-.6-1.1V3.3c0-.5.25-.9.6-1.1z"/><path fill="#FBBF24" d="m16.8 15.3-3.3-3.3 3.3-3.3 3.7 2.1c1 .6 1 1.9 0 2.4l-3.7 2.1z"/><path fill="#FF6B6B" d="M16.8 15.3 13.5 12l-9.9 9.8c.36.2.83.2 1.27-.05l11.93-6.45z"/><path fill="#38BDF8" d="M16.8 8.7 4.87 2.25C4.43 2 3.96 2 3.6 2.2L13.5 12l3.3-3.3z"/></svg>
+          <span><small>להורדה מ-</small><b>Google Play</b></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="https://edenmeshulam.github.io/pizponfree/privacy-policy.html">מדיניות פרטיות</a>
+    <a href="https://edenmeshulam.github.io/pizponfree/support.html">תמיכה</a>
+    <p>© 2026 פצפון · נבנה באהבה בישראל 💜</p>
+  </div>
+</footer>
+
+<a class="mbar" id="mbar" href="https://apps.apple.com/app/id6800318411">הורידו את פצפון – שבוע חינם</a>
+
+<script>
+  // Send each visitor straight to their own store: the sticky phone button and
+  // the nav button point at the App Store on iPhone/iPad and at Play on Android.
+  (function () {
+    var ua = navigator.userAgent || '';
+    var isAndroid = /android/i.test(ua);
+    var isIOS = /iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var ios = 'https://apps.apple.com/app/id6800318411';
+    var play = 'https://play.google.com/store/apps/details?id=com.pizpon.app';
+    var mine = isAndroid ? play : isIOS ? ios : null;
+    var bar = document.getElementById('mbar');
+    if (mine) {
+      bar.href = mine;
+      document.querySelectorAll('[data-store]').forEach(function (a) { a.href = mine; });
+    }
+    // The sticky bar appears once the hero's own buttons have scrolled away.
+    var hero = document.getElementById('download');
+    if ('IntersectionObserver' in window && hero) {
+      new IntersectionObserver(function (entries) {
+        bar.classList.toggle('show', !entries[0].isIntersecting);
+      }).observe(hero);
+    }
+  })();
+</script>
+</body>
+</html>
