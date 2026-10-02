@@ -14,7 +14,7 @@
 <meta property="og:locale" content="he_IL">
 <meta property="og:title" content="פצפון – אנגלית לילדים דרך משחק">
 <meta property="og:description" content="263 מילים, 18 משחקים, מסלול לפי גיל. בלי פרסומות ובלי מעקב. שבוע ניסיון חינם.">
-<meta property="og:image" content="https://edenmeshulam.github.io/pizponfree/img/og.jpg">
+<meta property="og:image" content="https://pizpon.com/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="apple-itunes-app" content="app-id=6800318411">
 
@@ -458,8 +458,8 @@
 
 <footer>
   <div class="wrap">
-    <a href="https://edenmeshulam.github.io/pizponfree/privacy-policy.html">מדיניות פרטיות</a>
-    <a href="https://edenmeshulam.github.io/pizponfree/support.html">תמיכה</a>
+    <a href="https://pizpon.com/privacy-policy.html">מדיניות פרטיות</a>
+    <a href="https://pizpon.com/support.html">תמיכה</a>
     <p>© 2026 פצפון · נבנה באהבה בישראל 💜</p>
   </div>
 </footer>
@@ -469,16 +469,34 @@
 <script>
   // Send each visitor straight to their own store: the sticky phone button and
   // the nav button point at the App Store on iPhone/iPad and at Play on Android.
+  //
+  // Every store link also carries the channel the visitor came from, so one
+  // pizpon.com link can be shared everywhere and the store consoles still say
+  // which channel brought the install: pizpon.com/?c=fb-groups becomes
+  // ct=fb-groups on the App Store (Analytics -> Sources) and
+  // utm_source=fb-groups on Play (Store performance -> Traffic sources).
+  // A visit with no ?c= is counted as "website".
   (function () {
+    // App Store Connect -> Analytics -> Campaigns -> "Generate a campaign link"
+    // shows it as pt=. Apple ignores ct= without it.
+    var APPLE_PROVIDER_TOKEN = '128074936';
+    var params = new URLSearchParams(location.search);
+    var campaign = (params.get('c') || params.get('utm_source') || 'website')
+      .toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 40) || 'website';
+    var ios = 'https://apps.apple.com/app/id6800318411?ct=' + campaign +
+      (APPLE_PROVIDER_TOKEN ? '&pt=' + APPLE_PROVIDER_TOKEN : '') + '&mt=8';
+    var play = 'https://play.google.com/store/apps/details?id=com.pizpon.app&referrer=' +
+      encodeURIComponent('utm_source=' + campaign + '&utm_medium=website');
+
     var ua = navigator.userAgent || '';
     var isAndroid = /android/i.test(ua);
     var isIOS = /iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    var ios = 'https://apps.apple.com/app/id6800318411';
-    var play = 'https://play.google.com/store/apps/details?id=com.pizpon.app';
+    document.querySelectorAll('[data-platform="ios"]').forEach(function (a) { a.href = ios; });
+    document.querySelectorAll('[data-platform="android"]').forEach(function (a) { a.href = play; });
     var mine = isAndroid ? play : isIOS ? ios : null;
     var bar = document.getElementById('mbar');
+    bar.href = mine || ios;
     if (mine) {
-      bar.href = mine;
       document.querySelectorAll('[data-store]').forEach(function (a) { a.href = mine; });
     }
     // The sticky bar appears once the hero's own buttons have scrolled away.
