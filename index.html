@@ -135,6 +135,56 @@
   }
   @media (prefers-reduced-motion: reduce) { .float, .mascot-hero { animation: none; } }
 
+  /* hero cards: the same card as src/components/HeroCard.tsx, drawn at its
+     250 pt design size, where 1 pt = .4cqw so one card works at any width */
+  .cards-stage { position: relative; width: min(460px, 94%); margin-inline: auto; container-type: inline-size; }
+  .fan { position: relative; height: 82cqw; margin-top: 12cqw; }
+  .fan .hcard { position: absolute; top: 14cqw; }
+  .fan .hcard:nth-child(1) { left: 0; width: 35cqw; transform: rotate(-11deg); }
+  .fan .hcard:nth-child(2) { left: 29cqw; top: 0; width: 42cqw; z-index: 2; }
+  .fan .hcard:nth-child(3) { right: 0; width: 35cqw; transform: rotate(11deg); }
+  .hcard { container-type: inline-size; aspect-ratio: 1 / 1.44; direction: ltr; }
+  .hcard .rim {
+    position: absolute; inset: 0; border-radius: 10.4cqw; padding: 2.4cqw;
+    background: linear-gradient(135deg, var(--r1), var(--r2), var(--r3));
+    box-shadow: 0 0 7cqw var(--glow), 0 8cqw 14cqw -8cqw rgba(44, 32, 80, .6);
+  }
+  .hcard .panel { position: relative; height: 100%; border-radius: 8cqw; overflow: hidden; background: linear-gradient(160deg, var(--b1), var(--b2), var(--b3)); }
+  .hcard .panel::before { content: ""; position: absolute; inset: -30%; background: repeating-linear-gradient(55deg, rgba(255,255,255,.12) 0 .8cqw, transparent .8cqw 6.4cqw); }
+  .hcard .panel::after { content: ""; position: absolute; width: 120cqw; height: 120cqw; border-radius: 50%; top: -60cqw; left: -12cqw; background: rgba(255,255,255,.22); }
+  .hcard .holo {
+    position: absolute; inset: 0; opacity: .42; background-size: 300% 100%; animation: holo 4s linear infinite;
+    background-image: linear-gradient(110deg, #FF6EC7, #FFD36E, #7AFFC1, #6EC8FF, #C58CFF, #FF6EC7, #FFD36E, #7AFFC1);
+  }
+  .hcard .sheen { position: absolute; top: -30%; left: 0; width: 18cqw; height: 160%; background: rgba(255,255,255,.35); animation: sheen 3.2s ease-in-out infinite; transform: translateX(-36cqw) rotate(20deg); }
+  .hcard .art { position: absolute; right: -5.6cqw; top: -18.4cqw; width: 80cqw; height: 96cqw; object-fit: contain; filter: drop-shadow(0 2cqw 2cqw rgba(0,0,0,.25)); }
+  .hcard .corner { position: absolute; left: 6.4cqw; top: 7.2cqw; display: flex; flex-direction: column; align-items: center; }
+  .hcard .nb { position: absolute; top: 83.2cqw; left: 4cqw; right: 4cqw; display: flex; flex-direction: column; align-items: center; }
+  .hcard b, .hcard span { color: #fff; text-shadow: 0 1cqw 0 var(--ink-card); line-height: 1.1; font-weight: 900; }
+  .hcard .rating { font-size: 18.4cqw; line-height: 1; }
+  .hcard .team { font-size: 4.2cqw; letter-spacing: .5cqw; font-weight: 800; }
+  .hcard .dot { margin-top: 2cqw; width: 7.2cqw; height: 7.2cqw; border-radius: 50%; border: 1.2cqw solid #fff; }
+  .hcard .nm { font-size: 13.6cqw; letter-spacing: .6cqw; white-space: nowrap; }
+  .hcard .he { font-size: 6cqw; font-weight: 800; }
+  .hcard hr { width: 64cqw; height: .8cqw; border: 0; margin: 2.8cqw 0; background: rgba(255,255,255,.6); }
+  .hcard .stats { display: flex; gap: 4.8cqw; }
+  .hcard .stats span { display: flex; flex-direction: column; align-items: center; font-size: 7.6cqw; }
+  .hcard .stats small { font-size: 3.6cqw; letter-spacing: .3cqw; font-weight: 800; }
+  .hcard.rock { animation: rock 6s ease-in-out infinite; }
+  .silver { --r1: #FFFFFF; --r2: #A9B6C8; --r3: #64748B; --b1: #CBD5E1; --b2: #7C8BA1; --b3: #475569; --ink-card: #27324A; --glow: rgba(226,232,240,.6); }
+  .gold { --r1: #FFF4B8; --r2: #FFD23F; --r3: #C98A00; --b1: #FFD84D; --b2: #E8A100; --b3: #A86A00; --ink-card: #7A4A00; --glow: rgba(255,214,77,.75); }
+  .holo-tier { --r1: #FF9AD5; --r2: #FFE27A; --r3: #8EC5FF; --b1: #7C3AED; --b2: #DB2777; --b3: #F59E0B; --ink-card: #4C1D95; --glow: rgba(255,154,213,.8); }
+  @keyframes rock { 0%, 100% { transform: perspective(900px) rotateY(-14deg) rotateX(6deg); } 50% { transform: perspective(900px) rotateY(14deg) rotateX(-3deg); } }
+  @keyframes sheen { 0% { transform: translateX(-36cqw) rotate(20deg); } 56%, 100% { transform: translateX(132cqw) rotate(20deg); } }
+  @keyframes holo { to { background-position: -300% 0; } }
+  @media (prefers-reduced-motion: reduce) { .hcard.rock, .hcard .sheen, .hcard .holo { animation: none; } }
+  .cards-bg { background: radial-gradient(120% 90% at 50% 0%, #6D3BEF, #3B1A99 60%, #1E0B5C); color: #fff; }
+  .cards-bg h2 { color: #fff; }
+  .cards-bg .abc-list { color: var(--ink-soft, #6B5F8C); }
+  .cards-bg > .wrap > div > .sub { color: rgba(255,255,255,.85); }
+  .cards-bg .eyebrow { color: #FFE27A; }
+  .cards-bg .fan { margin-top: 18cqw; }
+
   /* ---------- facts strip ---------- */
   .facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: -24px; position: relative; z-index: 5; }
   @media (min-width: 760px) { .facts { grid-template-columns: repeat(4, 1fr); } }
@@ -297,9 +347,9 @@
   <div class="blob a"></div><div class="blob b"></div>
   <div class="wrap">
     <div>
-      <a class="pill" href="#nikud" style="text-decoration:none"><span class="new">חדש!</span> קוראים עברית עם ניקוד – לגילאי <span dir="ltr">6–8</span></a>
+      <a class="pill" href="#cards" style="text-decoration:none"><span class="new">חדש!</span> קלפי גיבורים לאסוף</a>
       <h1>אנגלית לילדים,<br>קריאה בעברית,<br><span class="hl">דרך משחק.</span></h1>
-      <p class="lead">פצפון מלמדת ילדים בגילאי <span dir="ltr">3–8</span> את המילים הראשונות באנגלית, ועכשיו גם לקרוא עברית עם ניקוד. כל מילה עם תמונה, הקלטה קולית ותרגום, כך שגם ילד שעוד לא קורא משחק ומתקדם לבד.</p>
+      <p class="lead">פצפון מלמדת ילדים בגילאי <span dir="ltr">3–8</span> את המילים הראשונות באנגלית, ועכשיו גם לקרוא עברית עם ניקוד. כל מילה עם תמונה, הקלטה קולית ותרגום, כך שגם ילד שעוד לא קורא משחק ומתקדם לבד. ועל כל משחק מרוויחים כוכבים, שפותחים מתנות הפתעה עם 25 קלפי גיבורים לאסוף.</p>
       <div class="stores" id="download">
         <a class="store" href="https://apps.apple.com/app/id6800318411" data-platform="ios" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.64c-.02-2.25 1.84-3.33 1.92-3.38-1.05-1.53-2.68-1.74-3.26-1.76-1.39-.14-2.71.82-3.42.82-.7 0-1.79-.8-2.95-.78-1.52.02-2.92.88-3.7 2.24-1.58 2.74-.4 6.8 1.13 9.02.75 1.09 1.64 2.31 2.81 2.27 1.13-.05 1.56-.73 2.92-.73 1.36 0 1.75.73 2.95.71 1.22-.02 1.99-1.1 2.73-2.2.86-1.26 1.21-2.49 1.23-2.55-.03-.01-2.36-.9-2.36-3.66zM14.14 6.03c.62-.76 1.04-1.8.93-2.85-.9.04-1.99.6-2.63 1.35-.58.66-1.08 1.73-.95 2.75 1 .08 2.03-.51 2.65-1.25z"/></svg>
@@ -339,6 +389,44 @@
       <div class="step"><div class="num" style="background:var(--sky)">1</div><h3>שומעים</h3><p>כל מילה מגיעה עם תמונה ברורה והקלטה קולית – באנגלית ובעברית.</p></div>
       <div class="step"><div class="num" style="background:var(--coral)">2</div><h3>משחקים</h3><p>יורים באסטרואידים, שוברים לבנים, מפוצצים בועות – וכל מהלך הוא החלטה על מילה.</p></div>
       <div class="step"><div class="num" style="background:var(--grass)">3</div><h3>אומרים</h3><p>הילד אומר את המילה בקול, והאפליקציה בודקת אם אמר נכון – ישר במכשיר.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cards-bg" id="cards">
+  <div class="wrap abc">
+    <div>
+      <div class="eyebrow">חדש · קלפי גיבורים</div>
+      <h2>אוספים קלפי גיבורים</h2>
+      <p class="sub" style="margin-inline:0">על כל משחק מרוויחים כוכבים, ובחנות המתנות פותחים איתם מתנות הפתעה. בכל מתנה מחכה קלף גיבור, שאומר את המילה שלו באנגלית.</p>
+      <ul class="abc-list">
+        <li><span class="ic">🦄</span><span><b>25 גיבורים ב-5 קבוצות</b>קסם, גיבורים, פראיים, חיות מחמד וים</span></li>
+        <li><span class="ic">🎁</span><span><b>מתנת הפתעה</b>לוחצים, המתנה רועדת, נפתחת – והקלף מתהפך</span></li>
+        <li><span class="ic">✨</span><span><b>קלף כפול משתדרג</b>ארד, כסף, זהב והולו</span></li>
+        <li><span class="ic">⭐</span><span><b>רק כוכבים, בלי כסף</b>מרוויחים במשחק, לא קונים בכסף אמיתי</span></li>
+      </ul>
+    </div>
+    <div class="cards-stage" role="img" aria-label="שלושה קלפי גיבורים מהאפליקציה: בת ים, אריה וחד-קרן">
+      <div class="fan" aria-hidden="true">
+        <div class="hcard silver">
+          <div class="rim"><div class="panel"><i class="sheen"></i></div></div>
+          <img class="art" src="img/hero_mermaid.webp" alt="">
+          <div class="corner"><b class="rating">85</b><span class="team">MAGIC</span><i class="dot" style="background:#A855F7"></i></div>
+          <div class="nb"><b class="nm">MERMAID</b><span class="he" dir="rtl">בת ים</span><hr><div class="stats"><span>94<small>SWIM</small></span><span>89<small>SING</small></span><span>84<small>MAGIC</small></span></div></div>
+        </div>
+        <div class="hcard holo-tier rock">
+          <div class="rim"><div class="panel"><i class="holo"></i><i class="sheen"></i></div></div>
+          <img class="art" src="img/hero_lion.webp" alt="">
+          <div class="corner"><b class="rating">98</b><span class="team">WILD</span><i class="dot" style="background:#22C55E"></i></div>
+          <div class="nb"><b class="nm">LION</b><span class="he" dir="rtl">אריה</span><hr><div class="stats"><span>99<small>ROAR</small></span><span>94<small>POWER</small></span><span>96<small>BRAVE</small></span></div></div>
+        </div>
+        <div class="hcard gold">
+          <div class="rim"><div class="panel"><i class="sheen"></i></div></div>
+          <img class="art" src="img/hero_unicorn.webp" alt="">
+          <div class="corner"><b class="rating">93</b><span class="team">MAGIC</span><i class="dot" style="background:#A855F7"></i></div>
+          <div class="nb"><b class="nm">UNICORN</b><span class="he" dir="rtl">חד-קרן</span><hr><div class="stats"><span>94<small>MAGIC</small></span><span>82<small>SPEED</small></span><span>96<small>SPARKLE</small></span></div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
