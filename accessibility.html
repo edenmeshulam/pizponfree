@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הצהרת נגישות – פצפון</title>
+<meta name="description" content="הצהרת הנגישות של פצפון: מה הונגש באתר ובאפליקציה, מה עוד לא, ואיך פונים לרכז הנגישות.">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --grape: #6C4BD6;
+    --grape-dark: #4A2FA6;
+    --ink: #2C2050;
+    --ink-soft: #5D5280;
+    --bg: #F7F3FF;
+    --card: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Rubik', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.7; font-size: 17px; }
+  a { color: var(--grape-dark); font-weight: 700; }
+  :focus-visible { outline: 3px solid var(--grape-dark); outline-offset: 3px; border-radius: 6px; }
+  .skip { position: absolute; top: -60px; inset-inline-start: 12px; background: var(--grape-dark); color: #fff; padding: 10px 16px; border-radius: 12px; text-decoration: none; }
+  .skip:focus { top: 12px; }
+  header { width: min(760px, 100% - 32px); margin: 0 auto; padding: 24px 0 0; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 900; font-size: 22px; text-decoration: none; color: var(--grape-dark); }
+  .brand img { width: 40px; height: 40px; border-radius: 12px; }
+  main { width: min(760px, 100% - 32px); margin: 0 auto; padding: 16px 0 64px; }
+  h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.15; margin: 18px 0 6px; color: var(--grape-dark); font-weight: 900; }
+  .meta { color: var(--ink-soft); margin: 0 0 28px; }
+  section { background: var(--card); border-radius: 24px; padding: 22px 24px; margin-bottom: 18px; box-shadow: 0 18px 40px -26px rgba(59, 42, 120, 0.35); }
+  h2 { font-size: 22px; margin: 0 0 8px; color: var(--grape-dark); }
+  ul { margin: 0; padding-inline-start: 22px; }
+  li + li { margin-top: 6px; }
+  p { margin: 0 0 10px; } p:last-child { margin-bottom: 0; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0; }
+  dt { font-weight: 800; } dd { margin: 0; }
+  footer { text-align: center; color: var(--ink-soft); font-size: 14px; padding-bottom: 40px; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן הראשי</a>
+<header><a class="brand" href="./"><img src="img/icon.png" alt="">פצפון</a></header>
+
+<main id="main">
+  <h1>הצהרת נגישות</h1>
+  <p class="meta">עודכנה לאחרונה: 21 באוקטובר 2026</p>
+
+  <section>
+    <h2>המחויבות שלנו</h2>
+    <p>פצפון היא אפליקציה ללימוד אנגלית וקריאה בעברית לילדים. חשוב לנו שכל ילד וכל הורה יוכלו להשתמש באתר ובאפליקציה, כולל אנשים עם מוגבלות. אנחנו פועלים להנגשה לפי חוק שוויון זכויות לאנשים עם מוגבלות ותקנות הנגישות לשירות (תשע"ג–2013).</p>
+  </section>
+
+  <section>
+    <h2>נגישות האתר</h2>
+    <p>האתר pizpon.com הונגש לפי התקן הישראלי ת"י 5568, ברמה AA (המבוסס על הנחיות <span lang="en" dir="ltr">WCAG 2.0</span>). מה עשינו:</p>
+    <ul>
+      <li>ניגודיות צבעים של 4.5:1 לפחות בין הטקסט לרקע.</li>
+      <li>אפשר לנווט באתר כולו במקלדת, עם סימון ברור של הרכיב שבפוקוס וקישור "דילוג לתוכן הראשי".</li>
+      <li>לכל תמונה שמעבירה מידע יש טקסט חלופי, ותמונות קישוטיות מוסתרות מקוראי מסך.</li>
+      <li>מבנה כותרות מסודר, שפת הדף מוגדרת (עברית), ומילים באנגלית מסומנות כאנגלית.</li>
+      <li>אנימציות: אפשר לעצור את הקלפים הנעים בכפתור, ומי שהגדיר במכשיר "הפחתת תנועה" לא יראה אותן בכלל.</li>
+      <li>האתר מותאם לטלפון, ואפשר להגדיל את הטקסט עד 200% בלי לאבד תוכן.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>נגישות האפליקציה</h2>
+    <ul>
+      <li>כל המילים, ההוראות והמשחקים מוקראים בקול, כך שגם מי שלא קורא יכול לשחק ולהתקדם לבד.</li>
+      <li>כפתורים ומשטחי לחיצה גדולים, בצבעים בולטים.</li>
+      <li>אין פרסומות ואין חלונות קופצים.</li>
+    </ul>
+    <p style="margin-top:12px"><b>מה עוד לא נגיש:</b> חלק מהכפתורים באפליקציה עדיין לא מוקראים כראוי בקוראי המסך <span lang="en" dir="ltr">VoiceOver</span> ו-<span lang="en" dir="ltr">TalkBack</span>, והאנימציות עוד לא מתחשבות בהגדרת "הפחתת תנועה". חלק מהמשחקים מבוססים על תמונה וזמן, ואולי לא יתאימו לכל ילד. אנחנו עובדים על זה בעדכונים הקרובים. נתקלתם בבעיה? כתבו לנו ונעזור.</p>
+  </section>
+
+  <section>
+    <h2>פטור</h2>
+    <p>פצפון היא עסק קטן שמחזורו השנתי הממוצע אינו עולה על 100,000 ₪, ולכן לפי תקנות הנגישות לשירות היא פטורה מחובת ביצוע התאמות הנגישות באינטרנט. למרות זאת, הנגשנו את האתר ואנחנו ממשיכים להנגיש את האפליקציה, כי חשוב לנו שכולם יוכלו להשתמש בה.</p>
+  </section>
+
+  <section>
+    <h2>רכז הנגישות</h2>
+    <p>נתקלתם בבעיית נגישות, או שיש לכם הצעה? פנו אלינו ונחזור אליכם תוך 7 ימי עבודה.</p>
+    <dl>
+      <dt>שם</dt><dd>עדן משולם</dd>
+      <dt>טלפון</dt><dd><a href="tel:+972523916360" dir="ltr">052-391-6360</a></dd>
+      <dt>דוא"ל</dt><dd><a href="mailto:edenmeshulam20@gmail.com">edenmeshulam20@gmail.com</a></dd>
+    </dl>
+    <p style="margin-top:12px">כדי שנוכל לעזור, ספרו לנו מה ניסיתם לעשות, באיזה עמוד או מסך, ובאיזה מכשיר ודפדפן או קורא מסך השתמשתם.</p>
+  </section>
+</main>
+
+<footer><a href="./">חזרה לדף הבית</a> · © 2026 פצפון</footer>
+</body>
+</html>
