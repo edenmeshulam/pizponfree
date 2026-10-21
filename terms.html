@@ -1,127 +1,81 @@
 <!doctype html>
-<html lang="he">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>תנאי שימוש — פצפון | Terms of Use — Pizpon</title>
-    <style>
-      :root {
-        --ink: #2c2050;
-        --soft: #5d5280;
-        --line: #e5e1f0;
-        --bg: #ffffff;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --ink: #edeaf6;
-          --soft: #bcb3d2;
-          --line: #3a3355;
-          --bg: #17132b;
-        }
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        padding: 2.5rem 1.25rem 5rem;
-        background: var(--bg);
-        color: var(--ink);
-        font:
-          16px/1.7 -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          Roboto,
-          Arial,
-          sans-serif;
-      }
-      main {
-        max-width: 46rem;
-        margin: 0 auto;
-      }
-      section[lang="he"] {
-        direction: rtl;
-        text-align: right;
-      }
-      section[lang="en"] {
-        direction: ltr;
-        text-align: left;
-      }
-      h1,
-      h2 {
-        font-size: 1.7rem;
-        margin: 0 0 0.3rem;
-      }
-      h3 {
-        font-size: 1.15rem;
-        margin: 2rem 0 0.5rem;
-      }
-      .meta {
-        color: var(--soft);
-        font-size: 0.9rem;
-        margin-bottom: 2rem;
-      }
-      ul {
-        padding-inline-start: 1.3rem;
-      }
-      li {
-        margin: 0.35rem 0;
-      }
-      hr {
-        border: 0;
-        border-top: 1px solid var(--line);
-        margin: 3.5rem 0;
-      }
-      a {
-        color: inherit;
-      }
-      strong {
-        font-weight: 700;
-      }
-      .visually-hidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        white-space: nowrap;
-        border: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1 class="visually-hidden">מדיניות פרטיות — פצפון · Privacy Policy — Pizpon</h1>
-  <body>
-    <main>
-      <h1 class="visually-hidden">תנאי שימוש — פצפון · Terms of Use — Pizpon</h1>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>תנאי שימוש — פצפון | Terms of Use — Pizpon</title>
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --grape: #6C4BD6;
+    --grape-dark: #4A2FA6;
+    --ink: #2C2050;
+    --ink-soft: #5D5280;
+    --bg: #F7F3FF;
+    --card: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Rubik', system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.7; font-size: 17px; }
+  a { color: var(--grape-dark); font-weight: 700; }
+  :focus-visible { outline: 3px solid var(--grape-dark); outline-offset: 3px; border-radius: 6px; }
+  .skip { position: absolute; top: -60px; inset-inline-start: 12px; background: var(--grape-dark); color: #fff; padding: 10px 16px; border-radius: 12px; text-decoration: none; }
+  .skip:focus { top: 12px; }
+  header { width: min(760px, 100% - 32px); margin: 0 auto; padding: 24px 0 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 900; font-size: 22px; text-decoration: none; color: var(--grape-dark); }
+  .brand img { width: 40px; height: 40px; border-radius: 12px; }
+  .switch { background: var(--card); border-radius: 999px; padding: 6px 16px; text-decoration: none; font-size: 15px; box-shadow: 0 10px 24px -16px rgba(59, 42, 120, 0.5); }
+  main { width: min(760px, 100% - 32px); margin: 0 auto; padding: 16px 0 48px; }
+  .lang + .lang { margin-top: 56px; }
+  .title { font-size: clamp(30px, 6vw, 42px); line-height: 1.15; margin: 18px 0 6px; color: var(--grape-dark); font-weight: 900; }
+  .meta { color: var(--ink-soft); margin: 0 0 28px; }
+  .card { background: var(--card); border-radius: 24px; padding: 22px 24px; margin-bottom: 18px; box-shadow: 0 18px 40px -26px rgba(59, 42, 120, 0.35); }
+  .card h2, .card h3 { font-size: 22px; margin: 0 0 8px; color: var(--grape-dark); }
+  ul { margin: 0 0 10px; padding-inline-start: 22px; }
+  li + li { margin-top: 6px; }
+  p { margin: 0 0 10px; }
+  .card > :last-child { margin-bottom: 0; }
+  footer { text-align: center; color: var(--ink-soft); font-size: 14px; padding-bottom: 40px; }
+  footer a { margin: 0 8px; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">דילוג לתוכן הראשי</a>
+<header>
+  <a class="brand" href="./"><img src="img/icon.png" alt="">פצפון</a>
+  <a class="switch" href="#en" lang="en" dir="ltr">English</a>
+</header>
 
-      <section lang="he">
-        <h2>תנאי שימוש — פצפון</h2>
-        <p class="meta">עודכן לאחרונה: 8 באוקטובר 2026</p>
-
-        <h3>מי אנחנו</h3>
-        <p>
+<main id="main">
+  <div class="lang" lang="he" dir="rtl" id="he">
+    <h1 class="title">תנאי שימוש — פצפון</h1>
+    <p class="meta">עודכן לאחרונה: 8 באוקטובר 2026</p>
+    <section class="card">
+      <h2>מי אנחנו</h2>
+      <p>
           האפליקציה פצפון מופעלת על ידי <strong>Go Technologies 558624524</strong>, הסייפן 76 גן יבנה, ישראל. לכל שאלה אפשר לפנות אלינו
           בכתובת <a href="mailto:service@pizpon.com">service@pizpon.com</a>. השימוש באפליקציה מהווה הסכמה לתנאים אלה.
         </p>
-
-        <h3>למי האפליקציה מיועדת</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h2>למי האפליקציה מיועדת</h2>
+      <p>
           פצפון מיועדת לילדים בגילאי 3–8, בהשגחה של הורה. ההורה הוא מי שמקבל את התנאים, מוריד את האפליקציה ומבצע רכישות. כל הרכישות
           וההגדרות נמצאות מאחורי שער הורים.
         </p>
-
-        <h3>מה כלול בחינם ומה במנוי</h3>
-        <ul>
+    </section>
+    <section class="card">
+      <h2>מה כלול בחינם ומה במנוי</h2>
+      <ul>
           <li>בשבוע הראשון אחרי ההתקנה כל התוכן פתוח, בלי תשלום ובלי צורך בפרטי תשלום.</li>
           <li>אחרי השבוע הראשון חלק מהתוכן נשאר פתוח בחינם, והשאר נפתח עם מנוי או רכישה חד־פעמית.</li>
         </ul>
-
-        <h3>מנויים, מחירים ומטבע</h3>
-        <ul>
+    </section>
+    <section class="card">
+      <h2>מנויים, מחירים ומטבע</h2>
+      <ul>
           <li>יש שלוש אפשרויות: מנוי חודשי, מנוי שנתי, ורכישה חד־פעמית לתמיד.</li>
           <li>
             המחירים בישראל: מנוי חודשי ₪9.90, מנוי שנתי ₪39.90, לתמיד ₪79.90.
@@ -141,77 +95,87 @@
           <li>אפשר לשחזר רכישה במכשיר חדש דרך &quot;שחזור רכישות&quot; באזור ההורים.</li>
           <li>קודי הטבה מנוצלים דרך החנות, בכפוף לתנאים שהוצגו עם הקוד.</li>
         </ul>
-
-        <h3>החזרים וביטול עסקה</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h2>החזרים וביטול עסקה</h2>
+      <p>
           התשלום מתבצע דרך Apple או Google, ולכן בקשות להחזר מוגשות אליהן לפי המדיניות שלהן
           (ב־Apple דרך reportaproblem.apple.com, וב־Google Play דרך היסטוריית ההזמנות). אפשר גם לפנות אלינו ונעזור. אין בתנאים אלה כדי לגרוע
           מזכויות שעומדות לכם לפי חוק הגנת הצרכן, התשמ&quot;א–1981.
         </p>
-
-        <h3>תוכן וזכויות</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h2>תוכן וזכויות</h2>
+      <p>
           כל התוכן באפליקציה — איורים, הקלטות, משחקים וטקסטים — שייך לנו או לבעלי רישיון, ומיועד לשימוש אישי ולא מסחרי בלבד. אין להעתיק,
           להפיץ או למכור אותו.
         </p>
-
-        <h3>אחריות</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h2>אחריות</h2>
+      <p>
           אנחנו עושים מאמץ שהאפליקציה תעבוד היטב ושהתוכן יהיה מדויק, אבל היא מסופקת &quot;כפי שהיא&quot; (AS IS), ואיננו מתחייבים שתפעל בלי
           תקלות בכל מכשיר. אחריותנו מוגבלת, ככל שהדין מתיר, לסכום ששילמתם עבור האפליקציה ב־12 החודשים האחרונים.
         </p>
-
-        <h3>פרטיות</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h2>פרטיות</h2>
+      <p>
           איך אנחנו מטפלים במידע מוסבר ב<a href="https://pizpon.com/privacy-policy.html">מדיניות הפרטיות</a>. בקיצור: איננו אוספים מידע אישי על
           הילד/ה, ואין באפליקציה פרסומות או מעקב.
         </p>
-
-        <h3>תנאי החנויות</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h2>תנאי החנויות</h2>
+      <p>
           ב־iPhone וב־iPad חל גם <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">הסכם הרישיון הסטנדרטי של Apple</a>
           (EULA). ב־Android חלים גם תנאי השירות של Google Play. אם יש סתירה, התנאים כאן גוברים, ככל שהדין מתיר.
         </p>
-
-        <h3>שינויים בתנאים</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h2>שינויים בתנאים</h2>
+      <p>
           אם נשנה את התנאים נעדכן את התאריך בראש העמוד. שינוי מהותי, ובמיוחד שינוי מחיר של מנוי קיים, יימסר מראש כפי שהחנויות מחייבות, ואפשר
           יהיה לבטל לפני שהוא חל.
         </p>
+    </section>
+    <section class="card">
+      <h2>דין וסמכות שיפוט</h2>
+      <p>על תנאים אלה חלים דיני מדינת ישראל, וסמכות השיפוט נתונה לבתי המשפט המוסמכים בישראל.</p>
+    </section>
+    <section class="card">
+      <h2>יצירת קשר</h2>
+      <p><a href="mailto:service@pizpon.com">service@pizpon.com</a></p>
+    </section>
+  </div>
 
-        <h3>דין וסמכות שיפוט</h3>
-        <p>על תנאים אלה חלים דיני מדינת ישראל, וסמכות השיפוט נתונה לבתי המשפט המוסמכים בישראל.</p>
-
-        <h3>יצירת קשר</h3>
-        <p><a href="mailto:service@pizpon.com">service@pizpon.com</a></p>
-      </section>
-
-      <hr />
-
-      <section lang="en">
-        <h2>Terms of Use — Pizpon</h2>
-        <p class="meta">Last updated: 8 October 2026</p>
-
-        <h3>Who we are</h3>
-        <p>
+  <div class="lang" lang="en" dir="ltr" id="en">
+    <h2 class="title">Terms of Use — Pizpon</h2>
+    <p class="meta">Last updated: 8 October 2026</p>
+    <section class="card">
+      <h3>Who we are</h3>
+      <p>
           Pizpon is operated by <strong>Go Technologies 558624524</strong>, HaSayfan 76, Gan Yavne, Israel. Contact us at
           <a href="mailto:service@pizpon.com">service@pizpon.com</a>. By using the app you agree to these terms.
         </p>
-
-        <h3>Who the app is for</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h3>Who the app is for</h3>
+      <p>
           Pizpon is for children aged 3–8, used under a parent's supervision. The parent is the one who accepts these terms, downloads the app
           and makes purchases. All purchases and settings sit behind a parental gate.
         </p>
-
-        <h3>What is free and what needs a subscription</h3>
-        <ul>
+    </section>
+    <section class="card">
+      <h3>What is free and what needs a subscription</h3>
+      <ul>
           <li>For the first week after installing, everything is open, with no payment and no payment details needed.</li>
           <li>After the first week some content stays free, and the rest opens with a subscription or a one-time purchase.</li>
         </ul>
-
-        <h3>Subscriptions, prices and currency</h3>
-        <ul>
+    </section>
+    <section class="card">
+      <h3>Subscriptions, prices and currency</h3>
+      <ul>
           <li>There are three options: a monthly subscription, an annual subscription, and a one-time lifetime purchase.</li>
           <li>
             Prices in Israel: monthly ₪9.90, annual ₪39.90, lifetime ₪79.90.
@@ -232,52 +196,69 @@
           <li>A purchase can be restored on a new device with "Restore purchases" in the parents' area.</li>
           <li>Promo codes are redeemed through the store, under the terms shown with the code.</li>
         </ul>
-
-        <h3>Refunds and cancellation</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h3>Refunds and cancellation</h3>
+      <p>
           Payment is handled by Apple or Google, so refund requests go to them under their own policies (Apple: reportaproblem.apple.com;
           Google Play: your order history). You are also welcome to contact us and we will help. Nothing in these terms limits any rights you
           have under the Israeli Consumer Protection Law, 1981, or other consumer law that applies to you.
         </p>
-
-        <h3>Content and ownership</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h3>Content and ownership</h3>
+      <p>
           All content in the app — illustrations, recordings, games and text — belongs to us or our licensors and is for personal,
           non-commercial use only. Do not copy, distribute or sell it.
         </p>
-
-        <h3>Liability</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h3>Liability</h3>
+      <p>
           We work to keep the app reliable and its content accurate, but it is provided "as is", and we do not promise it will run without
           faults on every device. To the extent the law allows, our liability is limited to the amount you paid for the app in the last 12
           months.
         </p>
-
-        <h3>Privacy</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h3>Privacy</h3>
+      <p>
           How we handle data is explained in the <a href="https://pizpon.com/privacy-policy.html">privacy policy</a>. In short: we collect no
           personal information about the child, and the app has no ads or tracking.
         </p>
-
-        <h3>Store terms</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h3>Store terms</h3>
+      <p>
           On iPhone and iPad, <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple's Standard License Agreement</a>
           (EULA) also applies. On Android, the Google Play Terms of Service also apply. Where they conflict, these terms prevail to the extent
           the law allows.
         </p>
-
-        <h3>Changes to these terms</h3>
-        <p>
+    </section>
+    <section class="card">
+      <h3>Changes to these terms</h3>
+      <p>
           If we change these terms we will update the date at the top of this page. A material change, especially a price change to an existing
           subscription, will be notified in advance as the stores require, and you can cancel before it takes effect.
         </p>
+    </section>
+    <section class="card">
+      <h3>Governing law</h3>
+      <p>These terms are governed by the laws of the State of Israel, and the competent courts in Israel have jurisdiction.</p>
+    </section>
+    <section class="card">
+      <h3>Contact</h3>
+      <p><a href="mailto:service@pizpon.com">service@pizpon.com</a></p>
+    </section>
+  </div>
+</main>
 
-        <h3>Governing law</h3>
-        <p>These terms are governed by the laws of the State of Israel, and the competent courts in Israel have jurisdiction.</p>
-
-        <h3>Contact</h3>
-        <p><a href="mailto:service@pizpon.com">service@pizpon.com</a></p>
-      </section>
-    </main>
-  </body>
+<footer>
+  <a href="./">דף הבית</a>
+  <a href="privacy-policy.html">מדיניות פרטיות</a>
+  <a href="accessibility.html">הצהרת נגישות</a>
+  <a href="support.html">תמיכה</a>
+  <p>© 2026 פצפון</p>
+</footer>
+</body>
 </html>
