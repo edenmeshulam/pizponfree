@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>פצפון – אנגלית וקריאה בעברית לילדים, דרך משחק</title>
-<meta name="description" content="פצפון מלמדת ילדים בגילאי 3–8 את המילים הראשונות באנגלית דרך 18 משחקים: חללית, שובר לבנים, בועות ועוד. חדש: קוראים עברית עם ניקוד לגילאי 6–8. בלי פרסומות, בלי מעקב, עובד גם בלי אינטרנט.">
+<title>פצפון – אנגלית, קריאה בעברית וחשבון לילדים, דרך משחק</title>
+<meta name="description" content="פצפון מלמדת ילדים בגילאי 3–8 אנגלית, קריאה בעברית עם ניקוד וחשבון, דרך משחקים. חדש: פרופיל לכל ילד, שמתאים את עצמו לגיל ולמה שקשה לו, ומשחקי ניקוד חדשים. בלי פרסומות, בלי מעקב, עובד גם בלי אינטרנט.">
 <meta name="theme-color" content="#6C4BD6">
 <link rel="icon" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/icon.png">
@@ -12,8 +12,8 @@
 <!-- How the link looks when shared on WhatsApp / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
-<meta property="og:title" content="פצפון – אנגלית וקריאה בעברית לילדים, דרך משחק">
-<meta property="og:description" content="חדש: קוראים עברית עם ניקוד! וגם 439 מילים באנגלית ב-25 נושאים, 18 משחקים ואותיות ABC. בלי פרסומות ובלי מעקב. שבוע ניסיון חינם.">
+<meta property="og:title" content="פצפון – אנגלית, קריאה בעברית וחשבון לילדים, דרך משחק">
+<meta property="og:description" content="חדש: פרופיל לכל ילד ומשחקי ניקוד חדשים! אנגלית, קריאה עם ניקוד וחשבון באפליקציה אחת. בלי פרסומות ובלי מעקב. שבוע ניסיון חינם.">
 <meta property="og:image" content="https://pizpon.com/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="apple-itunes-app" content="app-id=6800318411">
@@ -267,6 +267,11 @@
     padding: 4px 30px 10px; font-size: 64px; font-weight: 800; color: var(--grape-dark);
     box-shadow: 0 8px 0 #E4DCFA, 0 24px 36px -18px rgba(59, 42, 120, .5);
   }
+  .gtiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 30px; }
+  .gtiles div { text-align: center; font-size: 14px; font-weight: 800; color: var(--grape-dark); }
+  .gtiles img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; border: 5px solid #fff; box-shadow: var(--shadow); margin-bottom: 6px; }
+  .kids-bg { background: linear-gradient(180deg, #F2FBF6, #F7F3FF); }
+  .math-bg { background: linear-gradient(180deg, #F7F3FF, #ECFBF4); }
   .nword small { display: block; font-size: 16px; font-weight: 700; color: var(--ink-soft); text-align: center; margin-top: -6px; }
   @media (max-width: 480px) { .ntile { width: 58px; height: 68px; font-size: 40px; border-radius: 18px; } }
 
@@ -369,9 +374,9 @@
   <div class="blob a"></div><div class="blob b"></div>
   <div class="wrap">
     <div>
-      <a class="pill" href="#cards" style="text-decoration:none"><span class="new">חדש!</span> קלפי גיבורים לאסוף</a>
-      <h1>אנגלית לילדים,<br>קריאה בעברית,<br><span class="hl">דרך משחק.</span></h1>
-      <p class="lead">פצפון מלמדת ילדים בגילאי <span dir="ltr">3–8</span> את המילים הראשונות באנגלית, ועכשיו גם לקרוא עברית עם ניקוד. כל מילה עם תמונה, הקלטה קולית ותרגום, כך שגם ילד שעוד לא קורא משחק ומתקדם לבד. ועל כל משחק מרוויחים כוכבים, שפותחים מתנות הפתעה עם 25 קלפי גיבורים לאסוף.</p>
+      <a class="pill" href="#kids" style="text-decoration:none"><span class="new">חדש!</span> פרופיל לכל ילד ומשחקי ניקוד</a>
+      <h1>אנגלית, קריאה<br>וחשבון לילדים,<br><span class="hl">דרך משחק.</span></h1>
+      <p class="lead">פצפון מלמדת ילדים בגילאי <span dir="ltr">3–8</span> את המילים הראשונות באנגלית, לקרוא עברית עם ניקוד ולחשב. לכל ילד בבית פרופיל משלו, שמתאים את עצמו לגיל ולמה שקשה לו. כל מילה עם תמונה, הקלטה קולית ותרגום, כך שגם ילד שעוד לא קורא משחק ומתקדם לבד. ועל כל משחק מרוויחים כוכבים, שפותחים מתנות הפתעה עם 25 קלפי גיבורים לאסוף.</p>
       <div class="stores" id="download">
         <a class="store" href="https://apps.apple.com/app/id6800318411" data-platform="ios" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.64c-.02-2.25 1.84-3.33 1.92-3.38-1.05-1.53-2.68-1.74-3.26-1.76-1.39-.14-2.71.82-3.42.82-.7 0-1.79-.8-2.95-.78-1.52.02-2.92.88-3.7 2.24-1.58 2.74-.4 6.8 1.13 9.02.75 1.09 1.64 2.31 2.81 2.27 1.13-.05 1.56-.73 2.92-.73 1.36 0 1.75.73 2.95.71 1.22-.02 1.99-1.1 2.73-2.2.86-1.26 1.21-2.49 1.23-2.55-.03-.01-2.36-.9-2.36-3.66zM14.14 6.03c.62-.76 1.04-1.8.93-2.85-.9.04-1.99.6-2.63 1.35-.58.66-1.08 1.73-.95 2.75 1 .08 2.03-.51 2.65-1.25z"/></svg>
@@ -415,10 +420,27 @@
   </div>
 </section>
 
+<section class="kids-bg" id="kids">
+  <div class="wrap abc">
+    <div>
+      <div class="eyebrow">חדש · פרופיל לכל ילד</div>
+      <h2>כל ילד והמסלול שלו</h2>
+      <p class="sub" style="margin-inline:0">בפתיחה פצפון שואל "מי משחק היום?". כל ילד נכנס עם הדמות שבחר וממשיך בדיוק מאיפה שהפסיק, גם כשיש כמה ילדים על אותו מכשיר.</p>
+      <ul class="abc-list">
+        <li><span class="ic">🦄</span><span><b>שם, דמות וגיל</b>בוחרים גיל בבלונים, ופצפון מתאים את המשחקים לשלב של הילד</span></li>
+        <li><span class="ic">🎯</span><span><b>קשה להתרכז?</b>סבבים קצרים יותר, כדי לסיים בהצלחה</span></li>
+        <li><span class="ic">🔤</span><span><b>מתבלבלים באותיות דומות?</b>יותר תרגול בין ב, כ ו-פ</span></li>
+        <li><span class="ic">⭐</span><span><b>מה רוצים לחזק?</b>קריאה, אנגלית או חשבון – העולם הזה נפתח ראשון</span></li>
+      </ul>
+    </div>
+    <div class="abc-phone"><img src="img/shot-kids.jpg" alt="מסך בחירת ילד: שלושה ילדים עומדים על הגבעה, כל אחד עם הדמות שבחר" loading="lazy"></div>
+  </div>
+</section>
+
 <section class="cards-bg" id="cards">
   <div class="wrap abc">
     <div>
-      <div class="eyebrow">חדש · קלפי גיבורים</div>
+      <div class="eyebrow">קלפי גיבורים</div>
       <h2>אוספים קלפי גיבורים</h2>
       <p class="sub" style="margin-inline:0">על כל משחק מרוויחים כוכבים, ובחנות המתנות פותחים איתם מתנות הפתעה. בכל מתנה מחכה קלף גיבור, שאומר את המילה שלו באנגלית.</p>
       <ul class="abc-list">
@@ -457,20 +479,43 @@
 <section class="nikud-bg" id="nikud">
   <div class="wrap abc">
     <div>
-      <div class="eyebrow">חדש · עולם שני</div>
+      <div class="eyebrow">חדש · משחקי ניקוד</div>
       <h2>קוראים עברית עם ניקוד</h2>
-      <p class="sub" style="margin-inline:0">עכשיו בפצפון שני עולמות: אנגלית, וקריאה בעברית לגילאי <span dir="ltr">6–8</span>. בוחרים עולם בתמרור שעל הגבעה ועוברים מתי שרוצים.</p>
+      <p class="sub" style="margin-inline:0">עולם קריאה בעברית לגילאי <span dir="ltr">6–8</span>, שמתקדם אות אחרי אות כמו ספרי הקריאה של כיתה א׳. בוחרים עולם בתמרור שעל הגבעה ועוברים מתי שרוצים.</p>
       <ul class="abc-list">
-        <li><span class="ic">✏️</span><span><b>כל האותיות והניקוד</b>13 סימני ניקוד ו-9 כללי קריאה</span></li>
-        <li><span class="ic">🪜</span><span><b>11 שלבים מסודרים</b>מכירים, מוצאים, נותנים שם וקוראים</span></li>
-        <li><span class="ic">📖</span><span><b>51 מילים ראשונות לקריאה</b>מפרקים להברות ואז מחברים</span></li>
+        <li><span class="ic">📖</span><span><b>כמו בספר של כיתה א׳</b>16 שלבים: אות אחרי אות, קודם קמץ, פתח ושווא</span></li>
+        <li><span class="ic">🎮</span><span><b>6 משחקי ניקוד חדשים</b>מפעל הצירופים, רכבת, מגלשה, נהר, האוזן הקסומה ו"איך זה נשמע?"</span></li>
+        <li><span class="ic">🧩</span><span><b>מצרפים ואז קוראים</b>מפרקים מילה להברות ומחברים אותן</span></li>
         <li><span class="ic">🔊</span><span><b>הכול מוקרא בקול</b>גם מדריך הניקוד, שמקריא כל סימן וכל כלל</span></li>
       </ul>
     </div>
     <div aria-hidden="true">
       <div class="ntiles"><div class="ntile">בָּ</div><div class="ntile">בִּ</div><div class="ntile">בֶּ</div><div class="ntile">בֹּ</div><div class="ntile">בֻּ</div></div>
       <div class="nword">שָׁלוֹם<small>שָׁ · לוֹם</small></div>
+      <div class="gtiles">
+        <div><img src="img/game_machine.jpg" alt="" loading="lazy"><span>מפעל הצירופים</span></div>
+        <div><img src="img/game_ear.jpg" alt="" loading="lazy"><span>האוזן הקסומה</span></div>
+        <div><img src="img/game_slide.jpg" alt="" loading="lazy"><span>מגלשת קריאה</span></div>
+        <div><img src="img/game_river.jpg" alt="" loading="lazy"><span>קפיצה בנהר</span></div>
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="math-bg" id="math">
+  <div class="wrap abc">
+    <div>
+      <div class="eyebrow">עולם שלישי</div>
+      <h2>חשבון 123</h2>
+      <p class="sub" style="margin-inline:0">לגילאי <span dir="ltr">6–8</span>: מכירים קודם כל מספר, ורק אחר כך מחברים ומחסרים. 13 שלבים, וכל הוראה נאמרת בקול.</p>
+      <ul class="abc-list">
+        <li><span class="ic">🔢</span><span><b>מכירים את המספרים</b>סופרים, לפני ואחרי</span></li>
+        <li><span class="ic">➕</span><span><b>חיבור וחיסור</b>עד 10, משלימים לעשר, ואז עד 20</span></li>
+        <li><span class="ic">🧺</span><span><b>עשרות, קפיצות וסיפורים</b>ועד קבוצות שוות</span></li>
+        <li><span class="ic">🏴‍☠️</span><span><b>מסלול עם תיבת אוצר</b>פצפון קופץ קדימה על כל רצף תשובות נכונות</span></li>
+      </ul>
+    </div>
+    <div class="abc-phone"><img src="img/shot-math-practice.jpg" alt="תרגול חשבון: 3 ועוד 4, עם עיגולים לספירה וארבע תשובות לבחירה" loading="lazy"></div>
   </div>
 </section>
 
@@ -538,7 +583,7 @@
     <div class="center">
       <div class="eyebrow">מותאם לגיל</div>
       <h2>שני מסלולים, כי גיל 4 הוא לא גיל 7</h2>
-      <p class="sub">בוחרים גיל פעם אחת, ופצפון בונה מסלול שמתאים בדיוק לשלב שבו הילד נמצא.</p>
+      <p class="sub">מספרים לפצפון בן כמה הילד, ופצפון בונה לו מסלול שמתאים בדיוק לשלב שבו הוא נמצא.</p>
     </div>
     <div class="ages">
       <div class="age little">
@@ -557,7 +602,7 @@
           <li>סולם קריאה: מזהים מילה, צליל פותח, אות חסרה, איות והקלדה</li>
           <li>בונים משפטים שלמים באנגלית</li>
           <li>משחקי אקשן: בלוקים (טטריס), חללית ושובר לבנים</li>
-          <li>חדש: עולם קריאה בעברית עם ניקוד</li>
+          <li>קריאה בעברית עם ניקוד, וחשבון 123</li>
         </ul>
       </div>
     </div>
@@ -603,9 +648,10 @@
   <div class="wrap">
     <div class="center"><div class="eyebrow">שאלות</div><h2>שאלות נפוצות</h2></div>
     <div class="faq">
-      <details><summary>לאיזה גיל מתאימה האפליקציה?</summary><p>לילדים בגילאי 3 עד 8. בפתיחה בוחרים גיל, והאפליקציה מציגה רק את המשחקים שמתאימים לשלב של הילד.</p></details>
+      <details><summary>לאיזה גיל מתאימה האפליקציה?</summary><p>לילדים בגילאי 3 עד 8. בפתיחה מספרים את גיל הילד ובמה קשה לו, והאפליקציה מציגה רק את המשחקים שמתאימים לו.</p></details>
+      <details><summary>יש לי כמה ילדים. אפשר?</summary><p>כן. לכל ילד פרופיל משלו עם שם, דמות, גיל והתקדמות נפרדת. בפתיחה בוחרים מי משחק, ומוסיפים או מוחקים ילד באזור ההורים. מנוי אחד מכסה את כל הילדים במכשיר.</p></details>
       <details><summary>הילד שלי עוד לא יודע לקרוא. זה בסדר?</summary><p>בהחלט. במסלול של גילאי 3–5 לא צריך לקרוא: כל מילה נשמעת בקול עם תמונה, וכל ההוראות נאמרות בעברית.</p></details>
-      <details><summary>מה זה עולם הניקוד?</summary><p>עולם שני בתוך פצפון, לילדים דוברי עברית בגילאי 6–8 שלומדים לקרוא. 11 שלבים מלמדים את כל האותיות, 13 סימני הניקוד ו-9 כללי קריאה, עד 51 מילים ראשונות שקוראים לבד. עוברים בין אנגלית לעברית בתמרור שבמסך הבית.</p></details>
+      <details><summary>מה זה עולם הניקוד?</summary><p>עולם בתוך פצפון לילדים דוברי עברית בגילאי 6–8 שלומדים לקרוא. 16 שלבים מתקדמים אות אחרי אות, באותו סדר כמו ספרי הקריאה של כיתה א׳, עם משחקים בכל שלב, עד מילים שקוראים לבד. עוברים בין העולמות בתמרור שבמסך הבית.</p></details>
       <details><summary>יש פרסומות?</summary><p>לא. אין פרסומות, אין קישורים שקופצים לילד ואין איסוף נתונים. רכישות אפשריות רק מאזור ההורים המוגן.</p></details>
       <details><summary>זה עובד בלי אינטרנט?</summary><p>כן. כל המילים, ההקלטות והמשחקים נמצאים בתוך האפליקציה. צריך אינטרנט רק כדי לרכוש מנוי.</p></details>
       <details><summary>איך מבטלים מנוי?</summary><p>בהגדרות החשבון ב-App Store או ב-Google Play, בכל רגע. אם מבטלים בזמן שבוע הניסיון – לא מחויבים.</p></details>
@@ -619,7 +665,7 @@
     <div class="final">
       <img class="m" src="img/mascot_celebrate.png" alt="">
       <h2>מוכנים להתחיל לשחק?</h2>
-      <p>הורידו את פצפון עכשיו ותנו לילדים ללמוד אנגלית בדרך הכי כיפית שיש.</p>
+      <p>הורידו את פצפון עכשיו ותנו לילדים ללמוד אנגלית, קריאה וחשבון בדרך הכי כיפית שיש.</p>
       <div class="stores">
         <a class="store" href="https://apps.apple.com/app/id6800318411" data-platform="ios" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.64c-.02-2.25 1.84-3.33 1.92-3.38-1.05-1.53-2.68-1.74-3.26-1.76-1.39-.14-2.71.82-3.42.82-.7 0-1.79-.8-2.95-.78-1.52.02-2.92.88-3.7 2.24-1.58 2.74-.4 6.8 1.13 9.02.75 1.09 1.64 2.31 2.81 2.27 1.13-.05 1.56-.73 2.92-.73 1.36 0 1.75.73 2.95.71 1.22-.02 1.99-1.1 2.73-2.2.86-1.26 1.21-2.49 1.23-2.55-.03-.01-2.36-.9-2.36-3.66zM14.14 6.03c.62-.76 1.04-1.8.93-2.85-.9.04-1.99.6-2.63 1.35-.58.66-1.08 1.73-.95 2.75 1 .08 2.03-.51 2.65-1.25z"/></svg>
